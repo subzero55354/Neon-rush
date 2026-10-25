@@ -1,0 +1,17 @@
+# Ignore the Python virtual environment folder (very large, never upload this)
+venv/
+ENV/
+env/
+
+# Ignore automatically generated Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local environment variables / secret keys
+.env
+
+# Ignore operating system junk files
+.DS_Store
+Thumbs.db

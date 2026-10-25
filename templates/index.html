@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Dash | Neon Rush</title>
+  <link rel="icon" type="image/png" href="/favicon.ico">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">NEON<span>RUSH</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#play">Play</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">ONE MORE ATTEMPT?</p>
+      <h1>JUMP INTO<br><span>THE RHYTHM.</span></h1>
+      <p>Jump, dodge, and survive. How far can you go?</p>
+      <a class="play-button" href="#play">PLAY NOW ↘</a>
+    </section>
+
+    <section class="game-section" id="play">
+      <h2>THE GAME</h2>
+      <p>Press SPACE or click to jump over obstacles.</p>
+
+      <div class="game-frame">
+        <canvas id="game" width="800" height="300"></canvas>
+      </div>
+
+      <div class="game-controls">
+        <span id="status">READY TO PLAY</span>
+        <span>BEST: <b id="best">0</b></span>
+        <button id="restart">RESTART ↻</button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>ONE RULE. DON'T CRASH.</h2>
+      <p>
+        A small rhythm-platformer project inspired by
+        classic cube jumping games. Every attempt gets you
+        closer to beating your record.
+      </p>
+    </section>
+  </main>
+
+
+  <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>

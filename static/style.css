@@ -1,0 +1,178 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0b18;
+  color: #f5f3ff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  height: 76px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #25233e;
+  background: #101020;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span, .hero h1 span {
+  color: #a78bfa;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: #c7c5d8;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+.hero {
+  min-height: 390px;
+  padding: 85px 20px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center,
+    #292052 0%, #0b0b18 70%);
+}
+
+.eyebrow {
+  color: #4deeea;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  margin: 22px 0;
+  font-size: clamp(38px, 7vw, 68px);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.hero p {
+  color: #b8b5d0;
+  margin-bottom: 28px;
+}
+
+.play-button, #restart {
+  background: #a78bfa;
+  color: #100b23;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.play-button:hover, #restart:hover {
+  background: #4deeea;
+}
+
+.game-section {
+  max-width: 900px;
+  padding: 65px 20px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-section h2, .about h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.game-section > p, .about p {
+  color: #aaa8c2;
+  margin-bottom: 26px;
+  line-height: 1.7;
+}
+
+.game-frame {
+  padding: 8px;
+  background: #19162b;
+  border: 1px solid #48406e;
+  border-radius: 12px;
+  box-shadow: 0 0 35px #7c3aed22;
+}
+
+canvas {
+  width: 100%;
+  display: block;
+  border-radius: 7px;
+  background: #111125;
+  touch-action: manipulation;
+}
+
+.game-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #bcb8d7;
+}
+
+#status {
+  color: #4deeea;
+  font-weight: bold;
+}
+
+.about {
+  padding: 65px 20px;
+  text-align: center;
+  background: #111020;
+}
+
+.about p {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #77738f;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .game-controls {
+    justify-content: center;
+  }
+}
