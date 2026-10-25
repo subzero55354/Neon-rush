@@ -1,15 +1,16 @@
 from flask import Flask, render_template
 
-# Initialize the Flask application
 app = Flask(__name__)
 
-# Route for the Home/Game page
+# Force the browser to completely disable caching for your style and game scripts
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+    return response
+
 @app.route('/')
 def index():
-    # Flask looks inside the 'templates' folder automatically for this file
     return render_template('index.html')
 
-# Run the local development server
 if __name__ == '__main__':
-    # debug=True automatically reloads the page when you save code changes
     app.run(debug=True, port=5000)
